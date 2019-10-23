@@ -3,7 +3,7 @@ package com.dylanbuchi.springdemo;
 /**
  * TennisCoach
  */
-public class TennisCoach implements Coach {
+public class TennisCoach implements ICoach {
 
     @Override
     public String getDailyTraining() {

@@ -15,9 +15,15 @@ public class SetterAppTest {
         // retrieve bean fromm spring container
         FootballCoach footballCoach = context.getBean("MyFootballCoach", FootballCoach.class);
 
-        // call methods on the bean (todo later)...
+        FortniteCoach fortniteCoach = context.getBean("MyFortniteCoach", FortniteCoach.class);
+
+        // call methods on the bean
         System.out.println(footballCoach.getDailyTraining());
         System.out.println(footballCoach.getDailyFortune());
+
+        // call the fortniteCoach methods
+        System.out.println(fortniteCoach.getEmail());
+        System.out.println(fortniteCoach.getTeam());
 
         // close the bean
         context.close();

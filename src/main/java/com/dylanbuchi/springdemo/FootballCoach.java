@@ -3,9 +3,9 @@ package com.dylanbuchi.springdemo;
 /**
  * FootballCoach
  */
-public class FootballCoach implements Coach {
+public class FootballCoach implements ICoach {
     // field for dependency
-    private FortuneService fortuneService;
+    private IFortuneService fortuneService;
 
     // no args constructor
     public FootballCoach() {
@@ -16,7 +16,7 @@ public class FootballCoach implements Coach {
     /**
      * @return the fortuneService
      */
-    public FortuneService getFortuneService() {
+    public IFortuneService getFortuneService() {
         return fortuneService;
     }
 
@@ -24,7 +24,7 @@ public class FootballCoach implements Coach {
     /**
      * @param fortuneService the fortuneService to set
      */
-    public void setFortuneService(FortuneService fortuneService) {
+    public void setFortuneService(IFortuneService fortuneService) {
         System.out.println("setter fortune injection");
         this.fortuneService = fortuneService;
     }

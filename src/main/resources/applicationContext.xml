@@ -4,6 +4,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="application.properties" />
 
     <!-- Define your beans here -->
     <bean id="MyFootballCoach" class="com.dylanbuchi.springdemo.FootballCoach">
@@ -12,9 +13,11 @@
     </bean>
 
 
-    <bean id="MyCoach" class="com.dylanbuchi.springdemo.FortniteCoach">
+    <bean id="MyFortniteCoach" class="com.dylanbuchi.springdemo.FortniteCoach">
         <!-- set the constructor dependency -->
         <constructor-arg ref="MyFortune" />
+        <property name="email" value="${foo.email}"></property>
+        <property name="team" value="${foo.team}"></property>
     </bean>
 
     <!-- define the dependency -->
