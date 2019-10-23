@@ -29,7 +29,7 @@ public class FootballCoach implements ICoach {
         this.fortuneService = fortuneService;
     }
 
-    // methods form coach
+    // methods from coach
     @Override
     public String getDailyTraining() {
 
@@ -41,5 +41,15 @@ public class FootballCoach implements ICoach {
 
         return fortuneService.getFortune();
     }
+    // start and end methos for the init and destroy bean
 
+    public void start() {
+        System.out.println("\nstarting your bean");
+
+    }
+
+    public void end() {
+        System.out.println("\nHere is the end. destroying the bean\n");
+
+    }
 }
